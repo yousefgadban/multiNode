@@ -5,6 +5,10 @@ let bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 
+app.use(express.static('./dist')); 
+
+
+
 const PORT = process.env.PORT || 5500;
 var server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`); 
